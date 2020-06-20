@@ -2,9 +2,17 @@
   "manifest_version": 2, 
   "name": "Good-ish Twitter",
   "version": "0.1.0",
+  "icons": { "16": "img/icon-gt-16.png",
+           "48": "img/icon-gt-48.png",
+          "128": "img/icon-gt-128.png" },
   "description": "Super simple extension to change Twitter display on Desktop to a more familiar experience, using only CSS. Completely transparent and open source! Inspired by GoodTwitter!", 
   "content_scripts": [{
     "css": ["style.css"],
     "matches": ["https://twitter.com/*"]
-  }] 
+  }],
+  "browser_action": {
+      "default_title": "Thank the author",
+      "default_icon": "img/icon-gt-16.png",
+      "default_popup": "popup.html"
+  } 
 }
